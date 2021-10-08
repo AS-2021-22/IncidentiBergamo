@@ -1,0 +1,20 @@
+{
+  "name": "bustracking",
+  "version": "1.0.0",
+  "description": "a simple bus track application",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "Carminati Giovanni, Scotti Davide",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.13"
+  }
+}
