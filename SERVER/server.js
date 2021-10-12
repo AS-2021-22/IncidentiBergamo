@@ -27,30 +27,13 @@ DB.connect(err => {
 //     else console.log(SQLparserBoolFieldsAndCoord(result[0]))
 // })
 
-function pointsParser(p){
-  let list = []
-  //console.log(p)
-  p.forEach(element => {
-    //console.log(element.Localizzazione)
-    let loc = element.Localizzazione.substr(1,element.Localizzazione.length -2).split(',') //'['5.4354','5.4353']'
-    //console.log(loc)
-    loc[0] = parseFloat(loc[0])
-    loc[1] = parseFloat(loc[1])
-    list.push(loc)
-  });
-  //console.log(list)
-  return list
-}
-
-const lista = [[45.6956,9.6671],[45.701,9.6657],[45.6957, 9.66]]
-
 app.use(cors())
 
 app.get('/',(req,res) => {res.send('hello world')})
 app.post('/data', (req,res) => {
-    DB.query(`SELECT Localizzazione FROM incidenti WHERE Morti > 0`,(err,result) => {
+    DB.query(`SELECT Protocollo,Localizzazione FROM incidenti WHERE Morti > 0`,(err,result) => {
       if(err) res.json({'error': err})
-      else res.json(pointsParser(result))
+      else res.json(result)
     })
 })
 
