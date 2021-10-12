@@ -14,11 +14,12 @@ export default function MapIncidenti() {
             method: "POST",
         })
         .then( res => res.json())
-        .then(res => {console.log(res); setter(res)})
+         .then(res => {/*console.log(res);*/ setter(res)})
         .catch(err => console.log(err))
     }
 
     useEffect(() => postPoints(setPoints),[]);
+    //<MapElement points={points}/>
     return (
         <div>
             <MapElement points={points}/>

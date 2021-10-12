@@ -4,6 +4,12 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import '../style/App.css'
 //import 'leaflet/dist/leaflet.css' //this create some problems with the marker, so it is imported in the html file
 
+
+function stringCoordParser(sc){
+    let [X,Y] = sc.substring(1,sc.length - 2).split(',')
+    return [parseFloat(X),parseFloat(Y)]
+}
+
 export default function MapElement({points}) {
     return (
         <div>
@@ -12,11 +18,11 @@ export default function MapElement({points}) {
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                {points.map((point,index) => {
+                {points.map((point) => {
                     return (
-                        <Marker key={index} position={point}>
+                        <Marker key={point.Protocollo} position={stringCoordParser(point.Localizzazione)}>
                             <Popup>
-                            A pretty CSS3 popup. <br /> Easily customizable.
+                                {point.Protocollo}
                             </Popup>
                         </Marker>
                     )
