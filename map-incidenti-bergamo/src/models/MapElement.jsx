@@ -1,4 +1,3 @@
-import { point } from 'leaflet'
 import React from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import '../style/App.css'
@@ -18,15 +17,17 @@ export default function MapElement({points}) {
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                {points.map((point) => {
-                    return (
-                        <Marker key={point.Protocollo} position={stringCoordParser(point.Localizzazione)}>
-                            <Popup>
-                                {point.Protocollo}
-                            </Popup>
-                        </Marker>
-                    )
-                })}
+                {
+                    points.map((point) => {
+                        return (
+                            <Marker key={point.Protocollo} position={stringCoordParser(point.Localizzazione)}>
+                                <Popup>
+                                    {point.Protocollo}
+                                </Popup>
+                            </Marker>
+                        )
+                    })
+                }
             </MapContainer>
         </div>
     )

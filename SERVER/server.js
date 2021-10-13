@@ -19,7 +19,10 @@ const DB = mysql.createConnection({
  
 DB.connect(err => {
     if (err) console.error('error connecting: ' + err.stack);
-    else console.log('DB connected')
+    else {
+      console.log('DB connected')
+      app.listen(PORT,() => console.log(`>Server listening on PORT: ${PORT}`))
+    }
 })
 
 // DB.query(` SELECT * FROM incidenti WHERE incidenti.Protocollo = '2002/001824' `,(err,result) => {
@@ -36,5 +39,3 @@ app.post('/data', (req,res) => {
       else res.json(result)
     })
 })
-
-app.listen(PORT,() => console.log(`>Server listening on PORT: ${PORT}`))
