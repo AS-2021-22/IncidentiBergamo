@@ -1,13 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
-
-#include "constsName.h"
-
-#define NOME_FILE_CSV_INPUT "./../incidenti_bergamo_short.csv"
-
-using namespace std;
+#include "./header.h"
 
 void stringSplitter(vector<string>& v,string s){
     int offset = 0;
