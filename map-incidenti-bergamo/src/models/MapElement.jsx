@@ -1,7 +1,7 @@
 import React from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import '../style/App.css'
-import {PopUp} from './PopUp'
+import PopUp from './PopUp'
 //import 'leaflet/dist/leaflet.css' //this create some problems with the marker, so it is imported in the html file
 const coordBergamo = [45.6982642, 9.6772698]
 
