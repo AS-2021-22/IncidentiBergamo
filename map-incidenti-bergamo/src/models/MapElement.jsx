@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react';
+
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import '../style/App.css'
 import PopUp from './PopUp'
@@ -12,8 +13,21 @@ function stringCoordParser(sc){
 
 export default function MapElement({points}) {
 
-    const [pressedPopUp,setPressedPopUp] = setState(false);
+    const [pressedPopUp,setPressedPopUp] = useState({pressed:false,arguments:{}});
 
+    const togglePop = () => {
+        setPressedPopUp({pressed:false,arguments:{}});
+    }
+
+    const handleClick = (code) => {
+        //request to the server
+
+        setPressedPopUp({pressed:true,arguments:{id:'scrivigli',eta:4}})
+
+    }
+
+    //onclick={() => handleClick(point.Protocollo)}
+    //{pressedPopUp.pressed ? null:<PopUp incidente={pressedPopUp.arguments} toggle={togglePop}/>}
 
     return (
         <div>
@@ -27,18 +41,22 @@ export default function MapElement({points}) {
                         return (
                             <Marker key={point.Protocollo} position={stringCoordParser(point.Localizzazione)}>
                                 <Popup>
+                                    <div onClick={() => handleClick(point.Protocollo)}>
                                     <h1>
                                         {point.Protocollo}
                                     </h1>
+                                    </div>
                                 </Popup>
                             </Marker>
                         )
                     })
                 }
 
-                {pressedPopUp ? <PopUp incidente={{id:'scrivigli',eta:4}} toggle={togglePop}/>:null}
-
             </MapContainer>
+
+            {pressedPopUp.pressed ? <PopUp incidente={pressedPopUp.arguments} toggle={togglePop}/> : null}
+
+            
         </div>
     )
 }
