@@ -1,6 +1,17 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 **/csv_to_binary/
+csv_to_binary/
+csv_to_binary
+DATA/csv_to_binary
+**/DATA/csv_to_binary
+DATA/csv_to_binary
+/DATA/csv_to_binary
+DATA/csv_to_binary/
+/DATA/csv_to_binary/
+*DATA/csv_to_binary/
+*DATA/csv_to_binary
+
 
 .env
 .exe
