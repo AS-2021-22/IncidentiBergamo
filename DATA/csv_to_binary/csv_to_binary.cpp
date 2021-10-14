@@ -29,5 +29,10 @@ void read(){
 
 int main(){
     read();
+
+    Incidente* i = new Incidente();//("fhosfhs",123,"vod","fhsofs","hfoshfso","fhdsihfisfhs",1,2,3,4,false,true,true,false,2.65365,5.5554);
+
+    i->print();
+
     return 0;
 }
