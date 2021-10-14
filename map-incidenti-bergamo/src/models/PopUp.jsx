@@ -14,7 +14,7 @@ export default class PopUp extends Component {
         <div className="modal_content">
             <h2>ID: Codice Incidente</h2>
           <span className="close" onClick={this.handleClick}>
-            &times
+            &times;
           </span>
           <div className="content">
               PRIMO: qesto testp è un testo fdi prova che serve per riempire la pagina
