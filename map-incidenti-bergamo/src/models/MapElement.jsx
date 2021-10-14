@@ -11,9 +11,13 @@ function stringCoordParser(sc){
 }
 
 export default function MapElement({points}) {
+
+    const [pressedPopUp,setPressedPopUp] = setState(false);
+
+
     return (
         <div>
-            <MapContainer style={{height:'80vh'}} center={coordBergamo} zoom={13} scrollWheelZoom={false}>
+            <MapContainer style={{height:'100vh'}} center={coordBergamo} zoom={13} scrollWheelZoom={false}>
                 <TileLayer
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -31,6 +35,9 @@ export default function MapElement({points}) {
                         )
                     })
                 }
+
+                {pressedPopUp ? <PopUp incidente={{id:'scrivigli',eta:4}} toggle={togglePop}/>:null}
+
             </MapContainer>
         </div>
     )

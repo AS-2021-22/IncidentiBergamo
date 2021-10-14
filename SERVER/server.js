@@ -25,10 +25,10 @@ DB.connect(err => {
     }
 })
 
-// DB.query(` SELECT * FROM incidenti WHERE incidenti.Protocollo = '2002/001824' `,(err,result) => {
-//     if(err) console.log(err)
-//     else console.log(SQLparserBoolFieldsAndCoord(result[0]))
-// })
+DB.query(` SELECT * FROM incidenti WHERE incidenti.Protocollo = '2002/001824' `,(err,result) => {
+    if(err) console.log(err)
+    else console.log(SQLparserBoolFieldsAndCoord(result[0]))
+})
 
 app.use(cors())
 

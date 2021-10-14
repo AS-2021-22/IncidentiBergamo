@@ -29,8 +29,7 @@ export default function MapIncidenti() {
     //<MapElement points={points}/>
     return (
         <div>
-            
-            <PopUp incidente={{id:'scrivigli',eta:4}} toggle={funzioneToggle}/>
+            <MapElement points={points}/>
         </div>
     )
 }
