@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import MapElement from './MapElement'
+import PopUp from './PopUp'
 
 export default function MapIncidenti() {
 
@@ -28,7 +29,8 @@ export default function MapIncidenti() {
     //<MapElement points={points}/>
     return (
         <div>
-            <MapElement points={points}/>
+            
+            <PopUp incidente={{id:'scrivigli',eta:4}} toggle={funzioneToggle}/>
         </div>
     )
 }

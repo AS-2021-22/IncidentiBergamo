@@ -31,8 +31,6 @@ export default function MapElement({points}) {
                         )
                     })
                 }
-
-                <PopUp incidente={{id:'scrivigli',eta:4}}/>
             </MapContainer>
         </div>
     )
