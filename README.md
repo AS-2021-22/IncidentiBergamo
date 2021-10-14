@@ -1,16 +1,9 @@
-# IMPORTANTE PER PROF. GUALTERONI E PROF. TOGNI
+# MAPPA INCIDENTI MORTALI BERGAMO
 
-Per ora consegno soltanto la cartella DATA che prevede l'utilizzo di un breve script di python per preparare al caricamento dei dati da CSV sul database.
-Il DB è phpmyadmin di XAMPP, provvederò a esportarlo in SQL prossimamente.
+La mappa 
 
-Per quanto riguarda lo script è stato usato per invertire il formato data -> da _'DD/MM/YYYY'_ a _'YYYY-MM-DD'_,
-e per convertire false/true in 0/1 (mysql memorizza i bool come tinyInt 0-255 nel quale 0 vale false e tutti gli altri numeri true)
-
-Le restanti cartelle per il server nodejs e client react è un programma non ancora finito, al momento visualizza su una mappa gli incidenti mortali.
-
-
-
-...da qui in poi mi serviva solo per ricordare cose è tutto pasticciato....
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
 
 ##### to make the MapContainer working propelly:
 
