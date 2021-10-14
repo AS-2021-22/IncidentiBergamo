@@ -31,15 +31,25 @@ export default class PopUp extends Component {
     return (
       <div className="modal">
         <div className="modal_content">
-            <h2>ID: Codice Incidente</h2>
+            <h2>ID INCIDENTE: {incidente.Protocollo}</h2>
           <span className="close" onClick={this.handleClick}>
             &times;
           </span>
           <div className="content">
-              PRIMO: qesto testp è un testo fdi prova che serve per riempire la pagina
-              SECONDO:  18/07/2021
-              TERZO:    Via moroni 7B ponteranica
-              ...
+            ANNO: {incidente.Anno}
+            DATA: {incidente.Data}
+            ORA: {incidente.Ora}
+            LOCALITA: {incidente.Localita}
+            NATURA INC: {incidente.NaturaIncidente}
+            ILLESI: {incidente.Illesi}
+            FERITI: {incidente.Feriti}
+            RISERVATA: {incidente.Riservata}
+            MORTI: {incidente.Morti}
+            PEDONI: {incidente.Pedoni}
+            CICLOMOTORI: {incidente.Ciclomotori}
+            VELOCIPEDI: {incidente.Velocipedi}
+            MEZZIPESANTI: {incidente.MezziPesanti}
+            LOCALIZZAZIONE: {incidente.Localizzazione}
           </div>
         </div>
       </div>
