@@ -1,5 +1,5 @@
-import React, { useState,useEffect } from 'react';
-import MapElement from './MapElement';
+import React, { useState,useEffect } from 'react'
+import MapElement from './MapElement'
 
 export default function MapIncidenti() {
 
@@ -7,7 +7,7 @@ export default function MapIncidenti() {
 
     const postPoints = (setter) => {
 
-        ///////////////////////////////////////////////////7
+        ///////////////////////////////////////////////////////
         fetch('http://localhost:5000/data',
         {
             headers: {
@@ -24,7 +24,7 @@ export default function MapIncidenti() {
 
     }
 
-    useEffect(() => postPoints(setPoints),[]);
+    useEffect(() => postPoints(setPoints),[])
     //<MapElement points={points}/>
     return (
         <div>
