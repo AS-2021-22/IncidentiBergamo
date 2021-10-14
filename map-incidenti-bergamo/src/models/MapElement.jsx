@@ -26,9 +26,6 @@ export default function MapElement({points}) {
 
     }
 
-    //onclick={() => handleClick(point.Protocollo)}
-    //{pressedPopUp.pressed ? null:<PopUp incidente={pressedPopUp.arguments} toggle={togglePop}/>}
-
     return (
         <div>
             <MapContainer style={{height:'100vh'}} center={coordBergamo} zoom={13} scrollWheelZoom={false}>

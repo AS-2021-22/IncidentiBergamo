@@ -36,20 +36,20 @@ export default class PopUp extends Component {
             &times;
           </span>
           <div className="content">
-            ANNO: {incidente.Anno}
-            DATA: {incidente.Data}
-            ORA: {incidente.Ora}
-            LOCALITA: {incidente.Localita}
-            NATURA INC: {incidente.NaturaIncidente}
-            ILLESI: {incidente.Illesi}
-            FERITI: {incidente.Feriti}
-            RISERVATA: {incidente.Riservata}
-            MORTI: {incidente.Morti}
-            PEDONI: {incidente.Pedoni}
-            CICLOMOTORI: {incidente.Ciclomotori}
-            VELOCIPEDI: {incidente.Velocipedi}
-            MEZZIPESANTI: {incidente.MezziPesanti}
-            LOCALIZZAZIONE: {incidente.Localizzazione}
+            ANNO: {incidente.Anno} <br/>
+            DATA: {incidente.Data.toString()}<br/>
+            ORA: {incidente.Ora}<br/>
+            LOCALITA: {incidente.Localita}<br/>
+            NATURA INC: {incidente.NaturaIncidente}<br/>
+            ILLESI: {incidente.Illesi}<br/>
+            FERITI: {incidente.Feriti}<br/>
+            RISERVATA: {incidente.Riservata}<br/>
+            MORTI: {incidente.Morti}<br/>
+            PEDONI: {incidente.Pedoni}<br/>
+            CICLOMOTORI: {incidente.Ciclomotori}<br/>
+            VELOCIPEDI: {incidente.Velocipedi}<br/>
+            MEZZIPESANTI: {incidente.MezziPesanti}<br/>
+            LOCALIZZAZIONE: {incidente.Localizzazione.toString()}<br/>
           </div>
         </div>
       </div>
