@@ -2,8 +2,9 @@
 
 La mappa 
 
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
+![application map](/SERVER/images/map.png)
+
+![information](/SERVER/images/info.png)
 
 ##### to make the MapContainer working propelly:
 
