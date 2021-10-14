@@ -1,6 +1,5 @@
 import React, { useState,useEffect } from 'react'
 import MapElement from './MapElement'
-import PopUp from './PopUp'
 
 export default function MapIncidenti() {
 

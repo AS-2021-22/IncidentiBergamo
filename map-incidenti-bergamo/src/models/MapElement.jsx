@@ -20,10 +20,17 @@ export default function MapElement({points}) {
     }
 
     const handleClick = (code) => {
-        //request to the server
-
-        setPressedPopUp({pressed:true,arguments:{id:'scrivigli',eta:4}})
-
+        fetch('http://localhost:5000/incidente',{
+            method:'POST',
+            headers:{
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({Protocollo:code})
+        })
+        .then(res => res.json())
+        .then(res => setPressedPopUp({pressed:true,arguments:res}))
+        .catch(err => console.log(err))
     }
 
     return (

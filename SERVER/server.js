@@ -25,12 +25,14 @@ DB.connect(err => {
     }
 })
 
-DB.query(` SELECT * FROM incidenti WHERE incidenti.Protocollo = '2002/001824' `,(err,result) => {
-    if(err) console.log(err)
-    else console.log(SQLparserBoolFieldsAndCoord(result[0]))
-})
+// DB.query(` SELECT * FROM incidenti WHERE incidenti.Protocollo = '2002/001824' `,(err,result) => {
+//     if(err) console.log(err)
+//     else console.log(SQLparserBoolFieldsAndCoord(result[0]))
+// })
 
 app.use(cors())
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.get('/',(req,res) => {res.send('hello world')})
 app.post('/data', (req,res) => {
@@ -38,4 +40,13 @@ app.post('/data', (req,res) => {
       if(err) res.json({'error': err})
       else res.json(result)
     })
+})
+
+app.post('/incidente',(req,res) => {
+
+  DB.query(`SELECT * FROM incidenti WHERE Protocollo = '${req.body.Protocollo}'`,(err,result) => {
+    if(err) res.json({'error': err})
+    else res.json(result[0])
+  })
+
 })
