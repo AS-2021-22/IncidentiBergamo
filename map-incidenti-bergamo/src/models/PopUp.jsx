@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import '../style/PopUp.css';
 
 export default class PopUp extends Component {
   handleClick = () => {
@@ -11,18 +12,16 @@ export default class PopUp extends Component {
     return (
       <div className="modal">
         <div className="modal_content">
+            <h2>ID: Codice Incidente</h2>
           <span className="close" onClick={this.handleClick}>
             &times
           </span>
-          <form>
-            <h3>Register!</h3>
-            <label>
-              Name:
-              <input type="text" name="name" />
-            </label>
-            <br />
-            <input type="submit" />
-          </form>
+          <div className="content">
+              PRIMO: qesto testp è un testo fdi prova che serve per riempire la pagina
+              SECONDO:  18/07/2021
+              TERZO:    Via moroni 7B ponteranica
+              ...
+          </div>
         </div>
       </div>
     );
